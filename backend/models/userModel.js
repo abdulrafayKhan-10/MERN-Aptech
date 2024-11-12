@@ -17,13 +17,11 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         default: "user",
-        enum: ["user", "admin"]  // optional, restricts to specific roles
     },
     status: {
         type: String,
         default: "active",
-        enum: ["active", "inactive"]  // optional, restricts to specific statuses
-    }
+        }
 });
 
 module.exports = mongoose.model("User", userSchema);
